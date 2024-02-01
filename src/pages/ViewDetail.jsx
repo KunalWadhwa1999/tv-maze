@@ -29,9 +29,13 @@ const ViewDetail = () => {
       </h1>
       <img
         className="image-detail"
-        src={movie?.image?.original}
+        src={
+          movie?.image?.original ??
+          "https://www.generationsforpeace.org/wp-content/uploads/2018/03/empty.jpg"
+        }
         alt={movie.name}
       />
+
       <div className="summary">{parse(movie.summary)}</div>
 
       <Button variant="outlined" onClick={handleClickOpen}>

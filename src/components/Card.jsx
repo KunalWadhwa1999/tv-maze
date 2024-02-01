@@ -10,10 +10,14 @@ const Card = ({ movie }) => {
   return (
     <div className="card" style={{ width: "18rem" }}>
       <img
-        src={movie?.image?.original}
+        src={
+          movie?.image?.original ??
+          "https://www.generationsforpeace.org/wp-content/uploads/2018/03/empty.jpg"
+        }
         className="card-img-top image-card"
         alt="..."
       />
+
       <div className="card-body">
         <h5 className="card-title">{movie?.name}</h5>
         <p className="card-text">
