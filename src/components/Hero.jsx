@@ -16,13 +16,12 @@ const Hero = () => {
   useEffect(() => {
     getData();
   }, []);
-
   return (
-    <>
+    <div className="card-k">
       {heroData.map((movie) => {
         return <Card key={movie.show.id} movie={movie.show} />;
       })}
-    </>
+    </div>
   );
 };
 

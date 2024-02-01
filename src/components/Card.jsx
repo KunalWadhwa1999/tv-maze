@@ -9,12 +9,16 @@ const Card = ({ movie }) => {
   };
   return (
     <div className="card" style={{ width: "18rem" }}>
-      <img src={movie?.image?.original} className="card-img-top" alt="..." />
+      <img
+        src={movie?.image?.original}
+        className="card-img-top image-card"
+        alt="..."
+      />
       <div className="card-body">
         <h5 className="card-title">{movie?.name}</h5>
         <p className="card-text">
           Genres:{" "}
-          <span>
+          <span className="genreClass">
             {movie.genres.map((genre, index) => {
               return (
                 <span key={index} className="badge text-bg-dark">
@@ -34,7 +38,7 @@ const Card = ({ movie }) => {
           Language: <span>{movie.language}</span>
         </p>
         <p className="card-text">
-          Rating: <span>{movie.rating.average}</span>
+          Rating: <span>{movie.rating.average ?? "NA"}</span>
         </p>
         <p className="btn btn-dark" onClick={() => viewSummary(movie)}>
           View Detail

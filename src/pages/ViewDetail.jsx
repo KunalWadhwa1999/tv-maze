@@ -23,18 +23,16 @@ const ViewDetail = () => {
     setOpen(false);
   };
   return (
-    <div>
-      <h1>{movie.name}</h1>
-      <img src={movie?.image?.medium} alt={movie.name} />
-      {parse(movie.summary)}
-      {/* <button
-        type="button"
-        className="btn btn-dark"
-        data-bs-toggle="modal"
-        data-bs-target="#exampleModal"
-      >
-        Book a movie ticket
-      </button> */}
+    <div className="details">
+      <h1>
+        <u>{movie.name}</u>
+      </h1>
+      <img
+        className="image-detail"
+        src={movie?.image?.original}
+        alt={movie.name}
+      />
+      <div className="summary">{parse(movie.summary)}</div>
 
       <Button variant="outlined" onClick={handleClickOpen}>
         Book Movie Tickets
@@ -55,6 +53,7 @@ const ViewDetail = () => {
               name,
               phoneNumber,
               tickets,
+              movie: `${movie.name}`,
             };
             localStorage.setItem("userDetails", JSON.stringify(userDetails));
             handleClose();

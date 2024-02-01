@@ -1,0 +1,39 @@
+.card-k {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    justify-content: space-around; 
+    padding: 2rem 0;
+}
+img{
+    height: 25rem;
+}
+.genreClass {
+        display: inline-flex;
+            gap: 8px
+}
+.details {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 8px;
+    background-color: white;
+    border: 3px solid black;
+    width: 40%;
+    margin: auto;
+    margin-top: 16px;
+    border-radius: 45px
+}
+.summary {
+    margin-top: 16px;
+}
+.details h1 {
+    margin-bottom: 16px;
+}
+@media (max-width: 795px) {
+    .details {
+        width: 90%;
+    }
+
+}
